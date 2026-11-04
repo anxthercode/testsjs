@@ -1,8 +1,7 @@
-
 import { test, expect } from '@playwright/test';
 
 // Описываем набор API-тестов
-test.describe('API-тесты для Restful-booker', () => {
+test.describe('API-тесты для Restful-booker', { tag: '@api' }, () => {
 
   // Запускаем тесты последовательно
   test.describe.configure({ mode: 'serial' });

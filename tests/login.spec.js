@@ -1,8 +1,8 @@
 const { test, expect } = require('@playwright/test');
 
 // Описываем наш набор тестов
-test.describe('Авторизация на Sauce Demo', () => {
-
+test.describe('Авторизация на Sauce Demo', { tag: '@ui' }, () => {
+    
   // Тест 1: Успешная авторизация
   test('Пользователь должен успешно войти в систему', async ({ page }) => {
 

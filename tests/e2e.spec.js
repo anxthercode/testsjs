@@ -1,4 +1,3 @@
-
 import { test, expect } from '@playwright/test';
 
 import { LoginPage } from '../pages/LoginPage.js';
@@ -8,8 +7,8 @@ import { CheckoutStepOnePage } from '../pages/CheckoutStepOnePage.js';
 import { CheckoutStepTwoPage } from '../pages/CheckoutStepTwoPage.js';
 import { CheckoutCompletePage } from '../pages/CheckoutCompletePage.js';
 
-test('Покупка самого дорогого товара на Sauce Demo', async ({ page }) => {
-
+test('Покупка самого дорогого товара на Sauce Demo', { tag: '@ui' }, async ({ page }) => {
+  
   // Создаём экземпляры Page Objects
   const loginPage = new LoginPage(page);
   const inventoryPage = new InventoryPage(page);
